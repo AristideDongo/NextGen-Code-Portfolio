@@ -8,10 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        customFont: ['Protest Guerrilla', 'serif'],
+        customFont2: ['DM Serif Text', 'serif'],
       },
+      colors: {
+        customColors: '#FFA500'
+      }
     },
   },
   plugins: [],
