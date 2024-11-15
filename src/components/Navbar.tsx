@@ -39,10 +39,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed font-customFont2 z-50 top-0 left-0 right-0 bg-gray-700 border-b-4 border-customColors shadow-md flex items-center justify-between px-6 py-4">
+    <nav className="fixe font-customFont2 z-50 top-0 left-0 right-0 bg-gray-700 border-b-4 border-customColors shadow-md flex items-center justify-between px-6 py-4">
       {/* Logo Section */}
-      <div className="flex-shrink-0">
-        <a href="#" className="text-4xl font-bold text-white">
+      <div className="flex-shrink-0 ml-20">
+        <a href="/" className="text-4xl font-bold text-white">
           Desire<span className="text-customColors">John</span>
         </a>
       </div>
