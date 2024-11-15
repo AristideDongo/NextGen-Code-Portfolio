@@ -58,9 +58,8 @@ export default function Navbar() {
 
       {/* Navigation Links */}
       <ul
-        className={`${
-          isOpen ? 'block' : 'hidden'
-        } absolute md:relative md:flex space-y-4 md:space-y-0 md:space-x-6 top-16 left-0 w-full md:w-auto bg-gray-700 md:bg-transparent md:items-center p-4 md:p-0 transition-all duration-300`}
+        className={`${isOpen ? 'block' : 'hidden'
+          } absolute md:relative md:flex md:items-center md:justify-end top-16 md:top-0 left-0 w-full md:w-auto bg-gray-700 md:bg-transparent p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6 transition-all duration-300`}
       >
         <li className={activeSection === 'header' ? 'text-customColors' : ''}>
           <Link href="#header" onClick={menuClose} className="hover:text-customColors text-xl">
