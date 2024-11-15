@@ -23,7 +23,7 @@ export default function SkillsSection() {
           <motion.div
             className="flex space-x-8"
             animate={{ x: ["100%", "-100%"] }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             whileHover={{ x: 0 }}
           >
             <FaHtml5 className="text-9xl text-orange-600 flex-shrink-0" />

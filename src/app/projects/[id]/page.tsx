@@ -44,7 +44,7 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
                         ))}
                     </div>
                     <h1 className="text-5xl mt-5 font-bold text-center mb-8 text-customColors">{project.title}</h1>
-                    <p className="text-lg text-gray-100 text-center mt-6 mb-6 max-w-3xl">{project.description}</p>
+                    <p className="text-xl text-gray-100 text-center mt-6 mb-6 max-w-3xl">{project.description}</p>
                     
                     {/* Stacks alignés en ligne */}
                     <div className="flex flex-wrap justify-center gap-3 mb-6">
