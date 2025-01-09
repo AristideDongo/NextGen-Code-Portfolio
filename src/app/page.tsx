@@ -11,7 +11,6 @@ import ServiceSection from '@/components/Section/ServiceSection';
 import ContactSection from '@/components/Section/ContactSection';
 import FormationsPage from '@/components/Section/Formations';
 import CertificationSection from '@/components/Section/Certificate';
-import EducationPage from '@/components/Section/Educations';
 
 
 export default function Home() {
@@ -29,12 +28,11 @@ export default function Home() {
       <HeroSections />
       <AboutSection/>
       <SkillsSection/>
-      <EducationPage/>
       <FormationsPage/>
       <ExperienceSection/>
+      <CertificationSection/>
       <ProjectSection/>
       <ServiceSection/>
-      <CertificationSection/>
       <ContactSection/>
       </div>
     </>

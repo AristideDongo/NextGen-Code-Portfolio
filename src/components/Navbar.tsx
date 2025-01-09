@@ -90,7 +90,6 @@ export default function Navbar() {
                 { href: '#about', label: 'À propos' },
                 { href: '#projects', label: 'Réalisations' },
                 { href: '#skills', label: 'Compétences' },
-                { href: '#educations', label: 'Educations' },
                 { href: '#formations', label: 'Parcours' },
                 { href: '#experience', label: 'Expériences' },
                 { href: '#certificate', label: 'Certifications' }
