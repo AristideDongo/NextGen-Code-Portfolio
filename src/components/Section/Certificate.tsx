@@ -37,9 +37,9 @@ export default function CertificationSection() {
                 <Image
                   src={cert.image}
                   alt={`${cert.name} certification`}
-                  width={250}
-                  height={250}
-                  className="object-cover"
+                  width={1000}
+                  height={1000}
+                  className="object-cover w-full h-full"
                 />
               </div>
               

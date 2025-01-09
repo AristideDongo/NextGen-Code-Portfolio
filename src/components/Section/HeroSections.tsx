@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from "react";
 import Image from "next/image";
-import Image1 from '@/images/Coat_of_arms_of_Ivory_Coast_(heraldical).svg.png';
+import ImagePerso from '@/images/Sans titre.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -42,7 +42,7 @@ export default function HeroSections() {
                 {/* Right Image */}
                 <div className="flex-1 mb-8 md:mb-0 text-center">
                     <Image
-                        src={Image1}
+                        src={ImagePerso}
                         alt="Portfolio Image"
                         width={400}
                         height={384}

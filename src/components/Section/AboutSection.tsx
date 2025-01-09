@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 import { useEffect } from "react"
-import Image1 from '@/images/Coat_of_arms_of_Ivory_Coast_(heraldical).svg.png'
+import ImagePerso from '@/images/Sans titre.png'
 import AOS from "aos"
 import "aos/dist/aos.css";
 
@@ -50,9 +50,9 @@ export default function AboutSection() {
             </div>
             <div className="lg:w-1/2 mt-12 lg:mt-0 hidden md:block lg:ml-12">
               <Image
-                src={Image1}
-                width={300}
-                height={300}
+                src={ImagePerso}
+                width={1000}
+                height={1000}
                 alt="Photo de profil"
                 className="w-full h-full rounded-lg"
               />

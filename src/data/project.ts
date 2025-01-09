@@ -1,4 +1,4 @@
-import Image1 from '@/images/Coat_of_arms_of_Ivory_Coast_(heraldical).svg.png'
+import Image1 from '@/images/high-angle-femme-travaillant-ordinateur-portable_23-2149908209.jpg'
 
 
 export const ProjectData = [
