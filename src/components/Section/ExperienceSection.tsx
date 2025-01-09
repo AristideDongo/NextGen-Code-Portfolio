@@ -16,7 +16,7 @@ export default function ExperienceSection() {
   return (
     <>
     {/* Experience Section */}
-    <section id="timeline" className="py-16 text-white" data-aos="fade-right" >
+    <section id="experience" className="py-16 text-white" data-aos="fade-right" >
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
    <h2 className="text-3xl font-bold uppercase text-center mb-12">Mon Voyage Professionnel</h2>
    {Experience.map((experience) => (

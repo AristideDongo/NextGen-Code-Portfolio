@@ -8,8 +8,10 @@ import SkillsSection from '@/components/Section/SkillsSection';
 import ExperienceSection from '@/components/Section/ExperienceSection';
 import ProjectSection from '@/components/Section/ProjectSection';
 import ServiceSection from '@/components/Section/ServiceSection';
-import TestimonialSection from '@/components/Section/TestimonialSection';
 import ContactSection from '@/components/Section/ContactSection';
+import FormationsPage from '@/components/Section/Formations';
+import CertificationSection from '@/components/Section/Certificate';
+import EducationPage from '@/components/Section/Educations';
 
 
 export default function Home() {
@@ -27,10 +29,12 @@ export default function Home() {
       <HeroSections />
       <AboutSection/>
       <SkillsSection/>
+      <EducationPage/>
+      <FormationsPage/>
       <ExperienceSection/>
       <ProjectSection/>
       <ServiceSection/>
-      <TestimonialSection/>
+      <CertificationSection/>
       <ContactSection/>
       </div>
     </>

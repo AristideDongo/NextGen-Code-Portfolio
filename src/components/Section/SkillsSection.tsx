@@ -1,40 +1,72 @@
 'use client'
 import { useEffect } from "react";
-import { motion } from "framer-motion"
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { skillsData } from "@/data/skills";
+
+
+
 export default function SkillsSection() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durée de l'animation en millisecondes
+      duration: 1000,
       once: false,
-      easing: 'ease-in-out', // Type d'animation
+      easing: 'ease-in-out',
       mirror: true,
     });
   }, []);
-  return (
-    <>
-      {/* Skills Section */}
-      <section id="skills" className="mb-12" data-aos="fade-right" >
-        <h2 className="text-3xl font-bold uppercase text-center text-white mb-4">SPECIALITES</h2>
-        <div className="w-full overflow-hidden">
-          <motion.div
-            className="flex space-x-8 md:space-x-16" // Réduire l'espace sur mobile
-            animate={{ x: ["100%", "-100%"] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            whileHover={{ x: 0 }}
-          >
-            <FaHtml5 className="text-7xl md:text-9xl text-orange-600 flex-shrink-0" />
-            <FaCss3Alt className="text-7xl md:text-9xl text-blue-600 flex-shrink-0" />
-            <FaJs className="text-7xl md:text-9xl text-yellow-500 flex-shrink-0" />
-            <FaReact className="text-7xl md:text-9xl text-blue-500 flex-shrink-0" />
-            <RiNextjsFill className="text-7xl md:text-9xl text-black flex-shrink-0" />
-          </motion.div>
 
+  return (
+    <section id='skills' className="py-20">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 
+          className="text-4xl font-bold text-center text-white mb-16"
+          data-aos="fade-down"
+        >
+          Compétences Techniques
+        </h2>
+
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+          {skillsData.map((category, idx) => (
+            <div 
+              key={category.category}
+              className="bg-gray-800 rounded-xl p-6 shadow-xl"
+              data-aos="fade-up"
+              data-aos-delay={idx * 100}
+            >
+              <h3 className="text-xl font-semibold text-white mb-6 text-center">
+                {category.category}
+              </h3>
+              
+              <div className="space-y-6">
+                {category.skills.map((skill) => {
+                  const Icon = skill.icon;
+                  return (
+                    <div key={skill.name} className="relative">
+                      <div className="flex items-center mb-2">
+                        <Icon className={`text-2xl ${skill.color} mr-3`} />
+                        <span className="text-white">{skill.name}</span>
+                        <span className="ml-auto text-white">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+                        <div 
+                          className={`h-full ${skill.color} bg-opacity-80`}
+                          style={{ 
+                            width: `${skill.level}%`,
+                            transition: 'width 1s ease-in-out'
+                          }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
-    </>
-  )
+      </div>
+    </section>
+  );
 }

@@ -26,7 +26,7 @@ export default function HeroSections() {
                 {/* Left Content */}
                 <div className="flex-1 text-center md:text-left">
                     <h1 className="text-4xl md:text-7xl font-customFont font-bold text-white mb-4">
-                        Desire<span className="text-customColors">Doe</span>
+                        Desire<span className="text-customColors">John</span>
                     </h1>
                     <p className="text-lg md:text-2xl text-white mb-8">
                         Junior JavaScript Developer

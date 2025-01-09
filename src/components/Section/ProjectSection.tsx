@@ -35,7 +35,7 @@ export default function ProjectSection() {
                 <div className="text-center">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                   <p className="text-white mb-4">{project.description}</p>
-                  <Link href={`/projects/${project.id}`} className="bg-blue-500 text-white py-2 px-4 rounded-lg font-bold hover:bg-blue-600 transition-colors duration-300">
+                  <Link href={`/projects/${project.id}`} className="bg-green-400 text-black py-2 px-4 rounded-lg font-bold hover:bg-green-600 transition-colors duration-300">
                     Voir les détails
                   </Link>
                 </div>
