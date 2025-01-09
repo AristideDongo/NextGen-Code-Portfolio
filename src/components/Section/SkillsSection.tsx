@@ -49,7 +49,6 @@ export const skillsData = [
   }
 ];
 
-
 export default function SkillsSection() {
   useEffect(() => {
     AOS.init({
@@ -60,8 +59,22 @@ export default function SkillsSection() {
     });
   }, []);
 
+  // Calculer le total des compétences par catégorie
+  const getCategoryTotal = (category: string) => {
+    const categoryData = skillsData.find((c) => c.category === category);
+    return categoryData?.skills.reduce((total, skill) => total + skill.level, 0) || 0;
+  };
+
+  // Totaux des compétences
+  const frontendTotal = getCategoryTotal('Frontend Development');
+  const backendTotal = getCategoryTotal('Backend Development');
+  const toolsTotal = getCategoryTotal('Tools & Others');
+
+  // Année d'expérience
+  const yearsOfExperience = 3;
+
   return (
-    <section id='skills' className="py-20">
+    <section id='skills' className="py-20 -mb-[100px]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 
           className="text-4xl font-bold text-center text-white mb-16"
@@ -70,45 +83,32 @@ export default function SkillsSection() {
           Compétences Techniques
         </h2>
 
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {skillsData.map((category, idx) => (
-            <div 
-              key={category.category}
-              className="bg-gray-800 rounded-xl p-6 shadow-xl"
-              data-aos="fade-up"
-              data-aos-delay={idx * 100}
-            >
-              <h3 className="text-xl font-semibold text-white mb-6 text-center">
-                {category.category}
-              </h3>
-              
-              <div className="space-y-6">
-                {category.skills.map((skill) => {
-                  const Icon = skill.icon;
-                  return (
-                    <div key={skill.name} className="relative">
-                      <div className="flex items-center mb-2">
-                        <Icon className={`text-2xl ${skill.color} mr-3`} />
-                        <span className="text-white">{skill.name}</span>
-                        <span className="ml-auto text-white">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <div 
-                          className={`h-full ${skill.color} bg-opacity-80`}
-                          style={{ 
-                            width: `${skill.level}%`,
-                            transition: 'width 1s ease-in-out'
-                          }}
-                        />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+        {/* Résumé des compétences */}
+        <div 
+          className="bg-gray-900 text-white rounded-xl p-6 mb-12 shadow-lg"
+          data-aos="fade-up"
+        >
+          <h3 className="text-2xl font-semibold text-center mb-6">
+            Résumé des Compétences
+          </h3>
+          <ul className="space-y-4">
+            <li className="flex justify-between">
+              <span>Frontend Development</span>
+              <span>{frontendTotal} / 700</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Backend Development</span>
+              <span>{backendTotal} / 400</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Tools & Others</span>
+              <span>{toolsTotal} / 600</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Années d&apos;expérience</span>
+              <span>{yearsOfExperience} ans</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
