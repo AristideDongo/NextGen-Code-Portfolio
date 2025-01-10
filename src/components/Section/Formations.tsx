@@ -4,17 +4,14 @@ import { formations } from '@/data/formations';
 
 const FormationsPage = () => {
   return (
-    <div id='formations' className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <section id='formation'>
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* En-tête */}
         <div className="text-center mb-16">
           <h1 className="text-3xl font-bold uppercase text-center text-transparent bg-clip-text bg-white mb-6">
             Mon Parcours de Formation
           </h1>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-            Passionné par le développement web et le design, je maintiens mes compétences à jour
-            à travers une formation continue et des certifications reconnues.
-          </p>
         </div>
 
         {/* Liste des formations */}
@@ -74,6 +71,7 @@ const FormationsPage = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

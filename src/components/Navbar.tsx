@@ -38,6 +38,7 @@ export default function Navbar() {
         }
       });
 
+      console.log(currentSection);
       setActiveSection(currentSection);
     };
 
@@ -85,30 +86,30 @@ export default function Navbar() {
             md:flex md:items-center md:space-x-1`}
           >
             <ul className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-2 p-6 md:p-0">
-              {[
-                { href: '#header', label: 'Accueil' },
-                { href: '#about', label: 'À propos' },
-                { href: '#projects', label: 'Réalisations' },
-                { href: '#skills', label: 'Compétences' },
-                { href: '#formations', label: 'Parcours' },
-                { href: '#experience', label: 'Expériences' },
-                { href: '#certificate', label: 'Certifications' }
-              ].map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={menuClose}
-                    className={`block px-3 py-2 text-lg rounded-md transition-colors
-                      ${activeSection === item.href.slice(1)
-                        ? 'text-customColors font-semibold'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                      }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+  {[
+    { href: '#header', label: 'Accueil' },
+    { href: '#about', label: 'À propos' },
+    { href: '#projects', label: 'Réalisations' },
+    { href: '#skills', label: 'Compétences' },
+    { href: '#formation', label: 'Parcours' },
+    { href: '#experience', label: 'Expériences' },
+    { href: '#certificate', label: 'Certifications' },
+  ].map((item) => (
+    <li key={item.href}>
+      <Link
+        href={item.href}
+        onClick={menuClose}
+        className={`block px-3 py-2 text-lg rounded-md transition-colors 
+          ${activeSection === item.href.substring(1) 
+            ? 'text-white bg-gray-800/50' 
+            : 'text-gray-300 hover:text-white hover:bg-gray-800/50'}`}
+      >
+        {item.label}
+      </Link>
+    </li>
+  ))}
+</ul>
+
           </div>
 
           {/* Contact Button */}
